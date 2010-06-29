@@ -1,0 +1,28 @@
+This library will allow you to access the Amazon Product Advertising API. Learn more about the API at https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html.
+
+Here's a quick example:
+
+    var sys = require('sys'),
+        OperationHelper = require('../lib/Amazon/OperationHelper').OperationHelper;
+
+    var awsId = '[YOUR AWS ID HERE]',
+        awsSecret = '[YOUR AWS SECRET HERE]',
+        associateTag = '[YOUR ASSOCIATE TAG HERER]';
+
+    var opHelper = new OperationHelper({
+        awsId:     awsId,
+        awsSecret: awsSecret,
+        assocId:   associateTag
+    });
+
+    opHelper.execute('ItemSearch', {
+        'SearchIndex': 'Books',
+        'Keywords': 'harry potter',
+        'ResponseGroup': 'ItemAttributes,Offers'
+    }, function(error, results) {
+        if (error) { sys.print('Error: ' + error + "\n") }
+        sys.print("Results:\n" + results + "\n");
+    });
+
+The library is pretty slim. It doesn't even parse the XML results yet. It is also very
+new and may be unstable. That said, I'm using it without any problems.
