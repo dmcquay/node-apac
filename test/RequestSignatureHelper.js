@@ -1,6 +1,6 @@
 var sys = require('sys'),
     assert = require('assert'),
-    RSH = require('../../lib/Amazon/RequestSignatureHelper').RequestSignatureHelper;
+    RSH = require('../lib/RequestSignatureHelper').RequestSignatureHelper;
 
 // constructor
 var secretKey = 'this is a secret key',
