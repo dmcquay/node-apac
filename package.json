@@ -1,0 +1,8 @@
+{
+    'name': 'apac',
+    'description': 'Amazon Product Advertising Client for Node',
+    'version': '0.0.1',
+    'keywords': ['amazon', 'api', 'product', 'advertising', 'node'],
+    'directories': {'lib': './lib'},
+    'engines': {'node': '>= 0.1.97'}
+}

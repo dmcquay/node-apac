@@ -1,5 +1,6 @@
 var sys = require('sys'),
-    OperationHelper = require('../lib/Amazon/OperationHelper').OperationHelper;
+    kiwi = require('kiwi'),
+    OperationHelper = kiwi.require('apac').OperationHelper;
 
 var awsId = '[YOUR AWS ID HERE]',
     awsSecret = '[YOUR AWS SECRET HERE]',
