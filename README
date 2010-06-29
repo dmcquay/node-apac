@@ -1,4 +1,10 @@
-This library will allow you to access the Amazon Product Advertising API. Learn more about the API at https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html.
+apac (Amazon Product Advertising Client) will allow you to access the Amazon Product Advertising API. Learn more about the API at https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html.
+
+
+Install using kiwi:
+
+    kiwi install apac
+
 
 Here's a quick example:
 
@@ -24,6 +30,7 @@ Here's a quick example:
         if (error) { sys.print('Error: ' + error + "\n") }
         sys.print("Results:\n" + results + "\n");
     });
+
 
 The library is pretty slim. It doesn't even parse the XML results yet. It is also very
 new and may be unstable. That said, I'm using it without any problems.
