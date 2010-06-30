@@ -2,14 +2,10 @@ var sys = require('sys'),
     kiwi = require('kiwi'),
     OperationHelper = kiwi.require('apac').OperationHelper;
 
-var awsId = '[YOUR AWS ID HERE]',
-    awsSecret = '[YOUR AWS SECRET HERE]',
-    associateTag = '[YOUR ASSOCIATE TAG HERER]';
-
 var opHelper = new OperationHelper({
-    awsId:     awsId,
-    awsSecret: awsSecret,
-    assocId:   associateTag
+    awsId:     '[YOUR AWS ID HERE]',
+    awsSecret: '[YOUR AWS SECRET HERE]',
+    assocId:   '[YOUR ASSOCIATE TAG HERE]',
 });
 
 opHelper.execute('ItemSearch', {
