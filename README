@@ -1,16 +1,18 @@
 apac (Amazon Product Advertising Client) will allow you to access the Amazon Product Advertising API. Learn more about the API at https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html.
 
 
-Install using kiwi:
+Install using npm:
 
-    kiwi install apac
+    npm install apac@latest
+
+If you try to install without "@latest", it will try to install the most recent stable
+version, but there is no stable version yet. So for now you must specify latest.
 
 
 Here's a quick example:
 
     var sys = require('sys'),
-        kiwi = require('kiwi'),
-        OperationHelper = kiwi.require('apac').OperationHelper;
+        OperationHelper = require('apac').OperationHelper;
 
     var opHelper = new OperationHelper({
         awsId:     '[YOUR AWS ID HERE]',
