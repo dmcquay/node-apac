@@ -9,6 +9,10 @@ If you try to install without "@latest", it will try to install the most recent 
 version, but there is no stable version yet. So for now you must specify latest.
 
 
+Here is a quick start to help you get node, npm and node-apac installed and running:
+www.synchrosinteractive.com/blog/1-software/39-node-apac-quick-start
+
+
 Here's a quick example:
 
     var sys = require('sys'),
