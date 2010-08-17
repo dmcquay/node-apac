@@ -40,6 +40,7 @@ vows.describe('OperationHelper execute').addBatch({
                     'ResponseGroup': 'ItemAttributes,Offers'
             }, this.callback);
             
+            // use the emitter to emit the appropriate events
             request_emitter.emit('response', response_emitter);
             response_emitter.emit('data', '<it><is><some>xml</some></is></it>');
             response_emitter.emit('end');      
