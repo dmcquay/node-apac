@@ -4,7 +4,7 @@ var apac = require("../lib/apac"),
     http = require("http"),
     event = require('events');
 
-// the setup
+// the basic setup
 var OperationHelper = apac.OperationHelper;
 var opHelper = new OperationHelper({
         awsId:     'test',
@@ -13,6 +13,7 @@ var opHelper = new OperationHelper({
 });
 
 // some hand-rolled mocks
+// need a good mock framework, like sinon or espionage
 var request_emitter = new(event.EventEmitter),
     response_emitter = new(event.EventEmitter);
 
@@ -29,9 +30,9 @@ http.createClient = function(port, host) {
     };
 }
 
-// now for the test!
+// now for the tests!
 vows.describe('OperationHelper execute').addBatch({
-    'when getting results for the first time': {
+    'results': {
         topic: function() {
             opHelper.execute('ItemSearch', {
                     'SearchIndex': 'Books',
@@ -39,13 +40,17 @@ vows.describe('OperationHelper execute').addBatch({
                     'ResponseGroup': 'ItemAttributes,Offers'
             }, this.callback);
             
-            // use the emitter to emit the appropriate event
             request_emitter.emit('response', response_emitter);
-            response_emitter.emit('data', '<this><is><some>xml</some>you like?</is></this>');
-            response_emitter.emit('end')
+            response_emitter.emit('data', '<it><is><some>xml</some></is></it>');
+            response_emitter.emit('end');      
         },
-        'works': function(error, state) {
-            assert.isObject(state);
+        
+        'are json': function(error, result) {
+            assert.isObject(result);
+        },
+        
+        'have the right structure': function(error, result) {
+            assert.deepEqual(result, {is: {some: 'xml'}});
         }
     }
 }).run();
