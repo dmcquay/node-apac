@@ -30,9 +30,10 @@ Here's a quick example:
         'ResponseGroup': 'ItemAttributes,Offers'
     }, function(error, results) {
         if (error) { sys.print('Error: ' + error + "\n") }
-        sys.print("Results:\n" + results + "\n");
+        sys.print("Results:\n" + sys.inspect(results) + "\n");
     });
 
+Results are returned as a JSON object (XML results parsed using xml2js -- thanks pierrel).
 
-The library is pretty slim. It doesn't even parse the XML results yet. It is also very
-new and may be unstable. That said, I'm using it without any problems.
+The library is pretty slim. It is also very new and may be unstable. That said, I'm using
+it without any problems.

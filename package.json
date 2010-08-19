@@ -10,7 +10,10 @@
 , "os" : [ "linux", "darwin", "freebsd" ]
 , "directories" : { "lib" : "./lib/" }
 , "main" : "./lib/apac"
-, "dependencies" : { "vows" : ">=0.5.0" }
+, "dependencies" :
+  { "vows" : ">=0.5.0"
+  , "xml2js" : "*"
+  }
 , "engines" : { "node" : ">=0.1.97" }
 , "licenses" :
   [ { "type" : "MIT"

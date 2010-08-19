@@ -13,5 +13,5 @@ opHelper.execute('ItemSearch', {
     'ResponseGroup': 'ItemAttributes,Offers'
 }, function(error, results) {
     if (error) { sys.print('Error: ' + error + "\n") }
-    sys.print("Results:\n" + results + "\n");
+    sys.print("Results:\n" + sys.inspect(results) + "\n");
 });
