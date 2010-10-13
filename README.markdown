@@ -16,7 +16,7 @@ version, but there is no stable version yet. So for now you must specify latest.
 #Quick Start
 
 Here is a quick start to help you get node, npm and node-apac installed and running:
-www.synchrosinteractive.com/blog/1-software/39-node-apac-quick-start
+http://www.synchrosinteractive.com/blog/1-software/39-node-apac-quick-start
 
 
 Here's a quick example:
