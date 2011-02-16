@@ -1,6 +1,6 @@
 { "name" : "apac"
 , "description" : "Amazon Product Advertising API Client for Node"
-, "version" : "0.0.3"
+, "version" : "0.0.4"
 , "author" : "Dustin McQuay <dmcquay@gmail.com>"
 , "repository" :
   { "type" : "git"
