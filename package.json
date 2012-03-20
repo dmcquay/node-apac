@@ -4,7 +4,7 @@
 , "author" : "Dustin McQuay <dmcquay@gmail.com>"
 , "repository" :
   { "type" : "git"
-  , "url" : "git://github.com/joelvh/node-apac.git"
+  , "url" : "git://github.com/dmcquay/node-apac.git"
   }
 , "bugs" : { "web" : "http://github.com/dmcquay/node-apac/issues" }
 , "os" : [ "linux", "darwin", "freebsd" ]
