@@ -26,7 +26,7 @@ http.createClient = function(port, host) {
     return {
       request: function(it, doesnt, matter) {
           return request_emitter;
-      }  
+      }
     };
 }
 
@@ -39,17 +39,17 @@ vows.describe('OperationHelper execute').addBatch({
                     'Keywords': 'harry potter',
                     'ResponseGroup': 'ItemAttributes,Offers'
             }, this.callback);
-            
+
             // use the emitter to emit the appropriate events
             request_emitter.emit('response', response_emitter);
             response_emitter.emit('data', '<it><is><some>xml</some></is></it>');
-            response_emitter.emit('end');      
+            response_emitter.emit('end');
         },
-        
+
         'are json': function(error, result) {
             assert.isObject(result);
         },
-        
+
         'have the right structure': function(error, result) {
             assert.deepEqual(result, {is: {some: 'xml'}});
         }
