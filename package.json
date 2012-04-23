@@ -7,12 +7,12 @@
   , "url" : "git://github.com/joelvh/node-apac.git"
   }
 , "bugs" : { "web" : "http://github.com/dmcquay/node-apac/issues" }
-, "os" : [ "linux", "darwin", "freebsd" ]
+, "os" : [ "linux", "darwin", "freebsd", "win32" ]
 , "directories" : { "lib" : "./lib/" }
 , "main" : "./lib/apac"
 , "dependencies" :
-  { "vows" : ">=0.5.0"
-  , "xml2js" : ">=0.1.7"
+  { 
+    "xml2js" : ">=0.1.7"
   }
 , "engines" : { "node" : ">=0.1.97" }
 , "licenses" :
