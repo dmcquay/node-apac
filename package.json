@@ -1,12 +1,12 @@
 { "name" : "apac"
 , "description" : "Amazon Product Advertising API Client for Node"
-, "version" : "0.0.8"
+, "version" : "0.0.9"
 , "author" : "Dustin McQuay <dmcquay@gmail.com>"
 , "repository" :
   { "type" : "git"
   , "url" : "git://github.com/joelvh/node-apac.git"
   }
-, "bugs" : { "web" : "http://github.com/dmcquay/node-apac/issues" }
+, "bugs" : { "url" : "http://github.com/dmcquay/node-apac/issues" }
 , "os" : [ "linux", "darwin", "freebsd" ]
 , "directories" : { "lib" : "./lib/" }
 , "main" : "./lib/apac"
