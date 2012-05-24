@@ -21,7 +21,7 @@ Here is a quick start to help you get node, npm and node-apac installed and runn
 
 Here's a quick example:
 
-    var sys = require('sys'),
+    var util = require('util'),
         OperationHelper = require('apac').OperationHelper;
 
     var opHelper = new OperationHelper({
@@ -35,8 +35,8 @@ Here's a quick example:
         'Keywords': 'harry potter',
         'ResponseGroup': 'ItemAttributes,Offers'
     }, function(error, results) {
-        if (error) { sys.print('Error: ' + error + "\n") }
-        sys.print("Results:\n" + sys.inspect(results) + "\n");
+        if (error) { console.log('Error: ' + error + "\n") }
+        console.log("Results:\n" + util.inspect(results) + "\n");
     });
 
 Results are returned as a JSON object (XML results parsed using xml2js -- thanks pierrel).

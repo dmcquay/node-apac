@@ -1,5 +1,4 @@
-var sys = require('sys'),
-    assert = require('assert'),
+var assert = require('assert'),
     RSH = require('../lib/RequestSignatureHelper').RequestSignatureHelper;
 
 // constructor
