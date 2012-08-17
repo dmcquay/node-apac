@@ -7,7 +7,7 @@
   , "url" : "git://github.com/dmcquay/node-apac.git"
   }
 , "bugs" : { "url" : "http://github.com/dmcquay/node-apac/issues" }
-, "os" : [ "linux", "darwin", "freebsd" ]
+, "os" : [ "linux", "darwin", "freebsd", "windows"]
 , "directories" : { "lib" : "./lib/" }
 , "main" : "./lib/apac"
 , "dependencies" :
