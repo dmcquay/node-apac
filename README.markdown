@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/dmcquay/node-apac.png)](http://travis-ci.org/dmcquay/node-apac)
 node-apac - Node.js client for the Amazon Product Advertising API.
 
 apac (Amazon Product Advertising Client) will allow you to access the Amazon Product Advertising API from Node.js. It supports the newly required Request Signatures which can be a bit tedious to generate on your own. [Learn more about the Amazon Product Advertising API](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html).
