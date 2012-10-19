@@ -1,5 +1,5 @@
-var sys = require('sys'),
-    OperationHelper = require('apac').OperationHelper;
+var util = require('util'),
+    OperationHelper = require('../lib/apac').OperationHelper;
 
 var opHelper = new OperationHelper({
   awsId: '[YOUR AWS ID HERE]',
@@ -12,6 +12,6 @@ opHelper.execute('ItemSearch', {
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
 }, function(error, results) {
-  if (error) { sys.print('Error: ' + error + '\n') }
-  sys.print('Results:\n' + sys.inspect(results) + '\n');
+  if (error) { util.print('Error: ' + error + '\n') }
+  util.print('Results:\n' + util.inspect(results) + '\n');
 });
