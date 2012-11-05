@@ -14,7 +14,8 @@
     "linux",
     "darwin",
     "freebsd",
-    "windows"
+    "windows",
+    "solaris"
   ],
   "directories": {
     "lib": "./lib/"
