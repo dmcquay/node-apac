@@ -1,22 +1,21 @@
 {
-  "name": "cyber-apac",
+  "name": "apac",
   "description": "Amazon Product Advertising API Client for Node",
   "version": "0.0.11",
   "author": "Dustin McQuay <dmcquay@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/poul-kg/node-apac.git"
+    "url": "git://github.com/dmcquay/node-apac.git"
   },
   "bugs": {
-    "url": "https://github.com/poul-kg/node-apac/issues"
+    "url": "http://github.com/dmcquay/node-apac/issues"
   },
   "os": [
     "linux",
     "darwin",
     "freebsd",
     "windows",
-    "solaris",
-    "win32"
+    "solaris"
   ],
   "directories": {
     "lib": "./lib/"
