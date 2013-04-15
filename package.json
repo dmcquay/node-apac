@@ -16,7 +16,8 @@
     "freebsd",
     "windows",
     "solaris",
-    "win32"
+    "win32",
+    "sunos"
   ],
   "directories": {
     "lib": "./lib/"
