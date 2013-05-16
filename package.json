@@ -10,15 +10,6 @@
   "bugs": {
     "url": "http://github.com/dmcquay/node-apac/issues"
   },
-  "os": [
-    "linux",
-    "darwin",
-    "freebsd",
-    "windows",
-    "solaris",
-    "win32",
-    "sunos"
-  ],
   "directories": {
     "lib": "./lib/"
   },
