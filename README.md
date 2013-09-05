@@ -4,7 +4,11 @@ apac (Amazon Product Advertising Client) will allow you to access the Amazon Pro
 
 node-apac is just a thin wrapper around Amazon's API. The only intent is to take care of request signatures, performing the HTTP requests, processing the responses and parsing the XML. You should be able to run any operation becuase the operation and all parameters are passed directly to the execute method just as they will be passed to Amazon. The result is that you feel likely you're working directly with the API, but you don't have to worry about some of the more teadious tasks.
 
-_**Important**: I am not able to devote time to maintain this code properly. If anyone is interested in taking over that responsibility, please let me know._
+## New Maintainer
+
+Wesley Yue has joined the project as a contributor. Well, more than a collaborator/maintainer. For quite some time now I have not had the time to maintain this project properly, so I hope with Wesley your Pull Requests and issues will be addressed more quickly. Thanks Wesley!
+
+Wesley is a CS student from Vancouver. He has spent most of his time in Python/Django/Flask and PHP and is getting his feet wet with Node.js. He's anxious to learn and improve this project.
 
 ## Installation
 
