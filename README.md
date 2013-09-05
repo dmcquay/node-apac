@@ -6,7 +6,7 @@ node-apac is just a thin wrapper around Amazon's API. The only intent is to take
 
 ## New Maintainer
 
-Wesley Yue has joined the project as a contributor. Well, more than a collaborator/maintainer. For quite some time now I have not had the time to maintain this project properly, so I hope with Wesley your Pull Requests and issues will be addressed more quickly. Thanks Wesley!
+Wesley Yue has joined us as the main project maintainer. For quite some time now I have not had the time to maintain this project properly, so I hope with Wesley your Pull Requests and issues will be addressed more quickly. Thanks Wesley! I hope to still stay involved, but wanted to remove myself as bottleneck.
 
 Wesley is a CS student from Vancouver. He has spent most of his time in Python/Django/Flask and PHP and is getting his feet wet with Node.js. He's anxious to learn and improve this project.
 
