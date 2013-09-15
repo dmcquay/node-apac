@@ -11,7 +11,6 @@ opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
-}, function(error, results) {
-  if (error) { util.print('Error: ' + error + '\n') }
-  util.print('Results:\n' + util.inspect(results) + '\n');
+}, function(results) {
+	console.log(results);
 });
