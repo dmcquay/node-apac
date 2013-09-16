@@ -12,6 +12,8 @@ var opHelper = new OperationHelper({
   assocId: 'test-01'
 });
 
+
+
 // some hand-rolled mocks
 // need a good mock framework, like sinon or espionage
 var request_emitter = new(event.EventEmitter),
@@ -29,6 +31,8 @@ http.createClient = function(port, host) {
     }
   };
 };
+
+
 
 // now for the tests!
 vows.describe('OperationHelper execute').addBatch({
