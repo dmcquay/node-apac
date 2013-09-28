@@ -22,9 +22,6 @@ version, but there is no stable version yet. So for now you must specify latest.
 
 ## Quick Start
 
-Here is a quick start to help you get node, npm and node-apac installed and running:
-[node-apac Quick Start](http://www.synchrosinteractive.com/blog/1-software/39-node-apac-quick-start)
-
 Here's a quick example:
 ```javascript
 var util = require('util'),
@@ -37,13 +34,18 @@ var opHelper = new OperationHelper({
 });
 
 opHelper.execute('ItemSearch', {
-    'SearchIndex': 'Books',
-    'Keywords': 'harry potter',
-    'ResponseGroup': 'ItemAttributes,Offers'
-}, function(error, results) {
-    if (error) { console.log('Error: ' + error + "\n") }
-    console.log("Results:\n" + util.inspect(results) + "\n");
+  'SearchIndex': 'Books',
+  'Keywords': 'harry potter',
+  'ResponseGroup': 'ItemAttributes,Offers'
+}, function(results) {
+	console.log(results);
 });
+
+// output:
+// { ItemSearchResponse: 
+//    { '$': { xmlns: 'http://webservices.amazon.com/AWSECommerceService/2011-08-01' },
+//      OperationRequest: [ [Object] ],
+//      Items: [ [Object] ] } }
 ```
 
 Results are returned as a JSON object (XML results parsed using xml2js -- thanks pierrel).
