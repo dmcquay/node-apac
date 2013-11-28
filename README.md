@@ -4,12 +4,6 @@ apac (Amazon Product Advertising Client) will allow you to access the Amazon Pro
 
 node-apac is just a thin wrapper around Amazon's API. The only intent is to take care of request signatures, performing the HTTP requests, processing the responses and parsing the XML. You should be able to run any operation becuase the operation and all parameters are passed directly to the execute method just as they will be passed to Amazon. The result is that you feel likely you're working directly with the API, but you don't have to worry about some of the more teadious tasks.
 
-## New Maintainer
-
-Wesley Yue has joined us as the main project maintainer. For quite some time now I have not had the time to maintain this project properly, so I hope with Wesley your Pull Requests and issues will be addressed more quickly. Thanks Wesley! I hope to still stay involved, but wanted to remove myself as bottleneck.
-
-Wesley is a CS student from Vancouver. He has spent most of his time in Python/Django/Flask and PHP and is getting his feet wet with Node.js. He's anxious to learn and improve this project.
-
 ## Installation
 
 Install using npm:
@@ -32,6 +26,12 @@ var opHelper = new OperationHelper({
     awsSecret: '[YOUR AWS SECRET HERE]',
     assocId:   '[YOUR ASSOCIATE TAG HERE]'
 });
+
+// execute(operation, params, callback, onError)
+// operation: select from http://docs.aws.amazon.com/AWSECommerceService/latest/DG/SummaryofA2SOperations.html
+// params: parameters for operation (optional)
+// callback: callback function handling results
+// onError: function handling errors, otherwise all error messages are printed with console.log()
 
 opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
