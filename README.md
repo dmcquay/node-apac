@@ -32,6 +32,7 @@ var opHelper = new OperationHelper({
 // params: parameters for operation (optional)
 // callback: callback function handling results
 // onError: function handling errors, otherwise all error messages are printed with console.log()
+// useXML: boolean - if true, raw xml is returned (default: false)
 
 opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
