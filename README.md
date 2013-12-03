@@ -30,15 +30,14 @@ var opHelper = new OperationHelper({
 // execute(operation, params, callback, onError)
 // operation: select from http://docs.aws.amazon.com/AWSECommerceService/latest/DG/SummaryofA2SOperations.html
 // params: parameters for operation (optional)
-// callback: callback function handling results
+// callback(parsed, raw): callback function handling results. parsed = xml2js parsed response. raw = raw xml response
 // onError: function handling errors, otherwise all error messages are printed with console.log()
-// useXML: boolean - if true, raw xml is returned (default: false)
 
 opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
-}, function(results) {
+}, function(parsed) { // you can add a second parameter here to examine the raw xml response
 	console.log(results);
 });
 
