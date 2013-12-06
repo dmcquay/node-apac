@@ -37,7 +37,7 @@ opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
-}, function(parsed) { // you can add a second parameter here to examine the raw xml response
+}, function(results) { // you can add a second parameter here to examine the raw xml response
 	console.log(results);
 });
 
