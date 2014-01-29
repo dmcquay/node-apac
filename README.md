@@ -25,7 +25,9 @@ var opHelper = new OperationHelper({
     awsId:     '[YOUR AWS ID HERE]',
     awsSecret: '[YOUR AWS SECRET HERE]',
     assocId:   '[YOUR ASSOCIATE TAG HERE]'
+    // xml2jsOptions: an extra, optional, parameter for if you want to pass additional options for the xml2js module. (see https://github.com/Leonidas-from-XIV/node-xml2js#options)
 });
+
 
 // execute(operation, params, callback, onError)
 // operation: select from http://docs.aws.amazon.com/AWSECommerceService/latest/DG/SummaryofA2SOperations.html
