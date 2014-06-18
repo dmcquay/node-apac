@@ -4,4 +4,4 @@
 
 0.0.3 - 0.0.14 - Changes were not documented, refer to GitHub commits.
 
-0.1.0 - Errors are now returned as the first parameter of the callback function, instead of being processed by a seperate OnError function.
+1.0.0 - Errors are now returned as the first parameter of the callback function, instead of being processed by a seperate OnError function.
