@@ -4,6 +4,11 @@ apac (Amazon Product Advertising Client) will allow you to access the Amazon Pro
 
 node-apac is just a thin wrapper around Amazon's API. The only intent is to take care of request signatures, performing the HTTP requests, processing the responses and parsing the XML. You should be able to run any operation becuase the operation and all parameters are passed directly to the execute method just as they will be passed to Amazon. The result is that you feel likely you're working directly with the API, but you don't have to worry about some of the more teadious tasks.
 
+## Changelog
+v 1.0.0 ()
+Errors are now returned as the first parameter of the callback function, instead of being processed by a seperate OnError function.
+Note: This will break backwards compatibility with previous implementations where errors are processed by a sepearte funciton. Because of this, **version 1.0.0 will not be uploaded to NPM yet**, until more core features are added. Those who would like the new error processing implementation can get the module by cloning GitHub.
+
 ## Installation
 
 Install using npm:
@@ -29,17 +34,16 @@ var opHelper = new OperationHelper({
 });
 
 
-// execute(operation, params, callback, onError)
+// execute(operation, params, callback)
 // operation: select from http://docs.aws.amazon.com/AWSECommerceService/latest/DG/SummaryofA2SOperations.html
 // params: parameters for operation (optional)
-// callback(parsed, raw): callback function handling results. parsed = xml2js parsed response. raw = raw xml response
-// onError: function handling errors, otherwise all error messages are printed with console.log()
+// callback(err, parsed, raw): callback function handling results. err = potential errors raised from xml2js.parseString() or http.request(). parsed = xml2js parsed response. raw = raw xml response.
 
 opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
-}, function(results) { // you can add a second parameter here to examine the raw xml response
+}, function(err, results) { // you can add a third parameter for the raw xml response, "results" here are currently parsed using xml2js
 	console.log(results);
 });
 
@@ -51,6 +55,14 @@ opHelper.execute('ItemSearch', {
 ```
 
 Results are returned as a JSON object (XML results parsed using xml2js -- thanks pierrel).
+
+Error Handling:
+Note that there are three possible types of errors that can arise from opHelper.execute(). 
+1: xml2js.parseString() raised an error. 
+2: http.request to Amazon raised an error. (ex. a 404 error) 
+3: An error returned by Amazon after successfully sending the request. (ex. You provided invalid AWS keys.)
+
+Both error 1 and 2 are returned as the first parameter to the callback funciton in v1.0.0, and error 3 would be in "results" as you successfully recieved a response from Amazon.
 
 ## API Documentation
 
