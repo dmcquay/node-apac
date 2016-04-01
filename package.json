@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Dustin McQuay <dmcquay@gmail.com>",
   "scripts": {
-    "test:vows": "vows test",
     "test": "mocha lib/*.specs.js"
   },
   "repository": {
