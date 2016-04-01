@@ -1,1 +1,2 @@
 --require test/assign-globals.js
+--reporter min
