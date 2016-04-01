@@ -3,6 +3,10 @@
   "description": "Amazon Product Advertising API Client for Node",
   "version": "1.0.0",
   "author": "Dustin McQuay <dmcquay@gmail.com>",
+  "scripts": {
+    "test:vows": "vows test",
+    "test": "mocha lib/*.specs.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/dmcquay/node-apac.git"
@@ -15,14 +19,15 @@
   },
   "main": "./lib/apac",
   "dependencies": {
-    "xml2js": ">=0.2.3",
-    "request" : ">=2.12.0"
+    "xml2js": "0.2.3"
   },
   "devDependencies": {
-    "vows": ">=0.5.0"
+    "chai": "3.5.0",
+    "mocha": "2.4.5",
+    "sinon": "1.17.3"
   },
   "engines": {
-    "node": ">=0.1.97"
+    "node": ">=4.4.0"
   },
   "licenses": [
     {
