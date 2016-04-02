@@ -19,7 +19,7 @@
   },
   "main": "./lib/apac",
   "dependencies": {
-    "xml2js": "0.2.3"
+    "xml2js": "0.4.16"
   },
   "devDependencies": {
     "chai": "3.5.0",
