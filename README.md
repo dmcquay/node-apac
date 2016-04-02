@@ -48,7 +48,7 @@ opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
-}).then((response) {
+}).then((response) => {
 	console.log(response.results);
 
 	// raw xml response is also available
@@ -74,6 +74,33 @@ Note that there are three possible types of errors that can arise from opHelper.
 
 Both error 1 and 2 are returned in the promise catch callback, and error 3 would be in "results" as you successfully received a response from Amazon.
 (Note: old callback interface is still supported. See examples/example-item-search.js.)
+
+## Obtaining credentials
+
+Sign up here:
+https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html
+This will also direct you where to get your security credentials (accessKeyId and secretAccessKey)
+You will also need to go here: http://docs.aws.amazon.com/AWSECommerceService/latest/DG/becomingAssociate.html
+and click on one of the locale specific associate websites to sign up as an associate and get an associate ID,
+which is required for all API calls.
+
+## Contributing
+
+Feel free to submit a pull request. If you'd like, you may discuss the change with me first by submitting an issue.
+Please test all your changes. Current tests are located in lib/*.specs.js (next to each file under test).
+
+Execute tests with `npm test`
+
+Execute acceptance tests with `npm run test:acceptance`.
+For acceptance tests, you must set these environment variables first:
+
+```
+AWS_ACCESS_KEY_ID=[VALUE]
+AWS_SECRET_ACCESS_KEY=[VALUE]
+AWS_ASSOCIATE_ID=[VALUE]
+```
+
+You can set these values in your environment or in `test/acceptance/.env`.
 
 ## API Documentation
 
