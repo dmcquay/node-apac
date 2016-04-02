@@ -10,6 +10,7 @@ node-apac is just a thin wrapper around Amazon's API. The only intent is to take
 **v1.0.0** 
 Errors are now returned as the first parameter of the callback function, instead of being processed by a separate OnError function.
 Note: This will break backwards compatibility with previous implementations where errors are processed by a separate function. Because of this, **version 1.0.0 will not be uploaded to NPM yet**, until more core features are added. Those who would like the new error processing implementation can get the module by cloning GitHub.
+Update: Very soon we will publish 1.0 with this change. If you still need the old OnError function, you'll need to grab an old version from git.
 
 ## Installation
 
@@ -38,7 +39,7 @@ var opHelper = new OperationHelper({
 });
 
 
-// execute(operation, params, callback)
+// execute(operation, params)
 // operation: select from http://docs.aws.amazon.com/AWSECommerceService/latest/DG/SummaryofA2SOperations.html
 // params: parameters for operation (optional)
 // callback(err, parsed, raw): callback function handling results. err = potential errors raised from xml2js.parseString() or http.request(). parsed = xml2js parsed response. raw = raw xml response.
@@ -47,8 +48,13 @@ opHelper.execute('ItemSearch', {
   'SearchIndex': 'Books',
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
-}, function(err, results) { // you can add a third parameter for the raw xml response, "results" here are currently parsed using xml2js
-	console.log(results);
+}).then((response) {
+	console.log(response.results);
+
+	// raw xml response is also available
+	// console.log(response.responseBody);
+}).catch((err) => {
+    console.error(err);
 });
 
 // output:
@@ -66,7 +72,8 @@ Note that there are three possible types of errors that can arise from opHelper.
 2: http.request to Amazon raised an error. (ex. a 404 error) 
 3: An error returned by Amazon after successfully sending the request. (ex. You provided invalid AWS keys.)
 
-Both error 1 and 2 are returned as the first parameter to the callback funciton in v1.0.0, and error 3 would be in "results" as you successfully recieved a response from Amazon.
+Both error 1 and 2 are returned in the promise catch callback, and error 3 would be in "results" as you successfully received a response from Amazon.
+(Note: old callback interface is still supported. See examples/example-item-search.js.)
 
 ## API Documentation
 
@@ -76,7 +83,7 @@ when you can find them all here:
 
 ## License
 
-Copyright (c) 2010 Dustin McQuay. All rights reserved.
+Copyright (c) 2016 Dustin McQuay. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
