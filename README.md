@@ -94,6 +94,23 @@ You will also need to go here: http://docs.aws.amazon.com/AWSECommerceService/la
 and click on one of the locale specific associate websites to sign up as an associate and get an associate ID,
 which is required for all API calls.
 
+## Throttling / Request Limits
+
+By default, Amazon limits you to one request per second per IP. This limit increases with revenue performance. Learn
+more here: http://docs.aws.amazon.com/AWSECommerceService/latest/DG/TroubleshootingApplications.html
+
+To help you ensure you don't exceed the request limit, we provide an automatic throttling feature. By default, apac will
+not throttle. To enable throttling, set the maxRequestsPerSecond param when constructing your OperationHelper.
+
+```javascript
+var opHelper = new OperationHelper({
+    awsId:     '[YOUR AWS ID HERE]',
+    awsSecret: '[YOUR AWS SECRET HERE]',
+    assocId:   '[YOUR ASSOCIATE TAG HERE]',
+    maxRequestsPerSecond: 1
+});
+```
+
 ## Contributing
 
 Feel free to submit a pull request. If you'd like, you may discuss the change with me first by submitting an issue.
