@@ -1,3 +1,4 @@
+.idea
 .project
 node_modules
 # Logs and databases #
@@ -9,3 +10,4 @@ node_modules
 ehthumbs.db
 Icon?
 Thumbs.db
+.env
