@@ -4,7 +4,3 @@ node_js:
   - "5.1"
   - "4"
   - "4.0"
-before_install:
-  - pip install codecov
-after_success:
-  - codecov
