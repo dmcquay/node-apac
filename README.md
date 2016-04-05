@@ -2,19 +2,28 @@
 
 # node-apac - Node.js client for the Amazon Product Advertising API.
 
-apac (Amazon Product Advertising Client) will allow you to access the Amazon Product Advertising API from Node.js. It supports the newly required Request Signatures which can be a bit tedious to generate on your own. [Learn more about the Amazon Product Advertising API](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html).
+apac (Amazon Product Advertising Client) will allow you to access the Amazon Product Advertising API from Node.js. It
+supports the newly required Request Signatures which can be a bit tedious to generate on your own.
+[Learn more about the Amazon Product Advertising API](https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html).
 
-node-apac is just a thin wrapper around Amazon's API. The only intent is to take care of request signatures, performing the HTTP requests, processing the responses and parsing the XML. You should be able to run any operation because the operation and all parameters are passed directly to the execute method just as they will be passed to Amazon. The result is that you feel like you're working directly with the API, but you don't have to worry about some of the more tedious tasks.
+node-apac is just a thin wrapper around Amazon's API. The only intent is to take care of request signatures, performing
+the HTTP requests, processing the responses and parsing the XML. You should be able to run any operation because the
+operation and all parameters are passed directly to the execute method just as they will be passed to Amazon. The result
+is that you feel like you're working directly with the API, but you don't have to worry about some of the more tedious
+tasks.
 
 ## Changelog
-**v1.1.0**
-OperationHelper.execute now supports promises
-Internal improvements such as more robust testing
 
-**v1.0.0** 
-Errors are now returned as the first parameter of the callback function, instead of being processed by a separate OnError function.
-Note: This break backwards compatibility with previous versions where errors are processed by a separate function.
-If you still need the old OnError function, you'll need to grab an old version from git.
+**v1.1.0**
+
+ - OperationHelper.execute now supports promises
+ - Internal improvements such as more robust testing
+
+**v1.0.0**
+
+ - Errors are now returned as the first parameter of the callback function, instead of being processed by a separate
+   OnError function. Note: This breaks backwards compatibility with previous versions where errors are processed by a
+   separate function. If you still need the old OnError function, you'll need to grab an old version from git.
 
 ## Installation
 
@@ -73,8 +82,8 @@ Note that there are three possible types of errors that can arise from opHelper.
 2: http.request to Amazon raised an error. (ex. a 404 error) 
 3: An error returned by Amazon after successfully sending the request. (ex. You provided invalid AWS keys.)
 
-Both error 1 and 2 are returned in the promise catch callback, and error 3 would be in "results" as you successfully received a response from Amazon.
-(Note: old callback interface is still supported. See examples/example-item-search.js.)
+Both error 1 and 2 are returned in the promise catch callback, and error 3 would be in "results" as you successfully
+received a response from Amazon. (Note: old callback interface is still supported. See examples/example-item-search.js.)
 
 ## Obtaining credentials
 
