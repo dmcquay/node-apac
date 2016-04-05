@@ -1,7 +1,7 @@
 {
   "name": "apac",
   "description": "Amazon Product Advertising API Client for Node",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Dustin McQuay <dmcquay@gmail.com>",
   "scripts": {
     "test": "mocha lib/*.specs.js",
