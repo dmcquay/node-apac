@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dmcquay/node-apac.svg?branch=update)](https://travis-ci.org/dmcquay/node-apac)
+[![Build Status](https://travis-ci.org/dmcquay/node-apac.svg?branch=master)](https://travis-ci.org/dmcquay/node-apac)
 
 # node-apac - Node.js client for the Amazon Product Advertising API.
 
