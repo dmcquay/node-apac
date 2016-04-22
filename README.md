@@ -58,6 +58,12 @@ Example Response:
 }
 ```
 
+## API Documentation
+
+Because we don't define any specific operations, we also don't document them. What a waste
+when you can find them all here:
+[API Reference](http://docs.amazonwebservices.com/AWSECommerceService/latest/DG/index.html?ProgrammingGuide.html)
+
 ## Obtaining credentials
 
 Sign up here: https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html
@@ -102,12 +108,6 @@ AWS_ASSOCIATE_ID=[VALUE]
 ```
 
 You can set these values in your environment or in `test/acceptance/.env`.
-
-## API Documentation
-
-Because we don't define any specific operations, we also don't document them. What a waste
-when you can find them all here:
-[API Reference](http://docs.amazonwebservices.com/AWSECommerceService/latest/DG/index.html?ProgrammingGuide.html)
 
 ## License
 
