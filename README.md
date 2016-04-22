@@ -46,7 +46,7 @@ opHelper.execute('ItemSearch', {
 
 Example Response:
 
-```json
+```javascript
 {
     ItemSearchResponse: {
         $: {
