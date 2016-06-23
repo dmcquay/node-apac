@@ -25,7 +25,7 @@ describe('OperationHelper', () => {
             let opHelper = new OperationHelper({
                 awsId: config.AWS_ACCESS_KEY_ID,
                 awsSecret: config.AWS_SECRET_ACCESS_KEY,
-                assocId:   config.AWS_ASSOCIATE_ID
+                assocId: config.AWS_ASSOCIATE_ID
             })
 
             return opHelper.execute('ItemSearch', {
