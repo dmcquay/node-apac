@@ -39,8 +39,8 @@ describe('OperationHelper', () => {
 
         it('returns a sane looking response', () => {
             expect(result.ItemSearchResponse).to.exist
-            expect(result.ItemSearchResponse.Items.length).to.equal(1)
-            expect(result.ItemSearchResponse.Items[0].Item[0].ItemAttributes[0].Author[0]).to.equal('J.K. Rowling')
+            expect(result.ItemSearchResponse.Items.Item.length).to.be.at.least(1)
+            expect(result.ItemSearchResponse.Items.Item[0].ItemAttributes.Author[0]).to.equal('J.K. Rowling')
         })
     })
 })
