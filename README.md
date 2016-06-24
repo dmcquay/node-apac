@@ -111,6 +111,36 @@ var opHelper = new OperationHelper({
 });
 ```
 
+## Locales
+
+To use a locale other than the default (US), set the locale parameter.
+
+```javascript
+var opHelper = new OperationHelper({
+    awsId:     '[YOUR AWS ID HERE]',
+    awsSecret: '[YOUR AWS SECRET HERE]',
+    assocId:   '[YOUR ASSOCIATE TAG HERE]',
+    locale:    'IT'
+});
+```
+
+**Supported Locales**
+
+ID|Locale|Endpoint
+---|---|---
+BR|Brazil|webservices.amazon.com.br
+CA|Canada|webservices.amazon.ca
+CN|China|webservices.amazon.cn
+FR|France|webservices.amazon.fr
+DE|Germany|webservices.amazon.de
+IN|India|webservices.amazon.in
+IT|Italy|webservices.amazon.it
+JP|Japan|webservices.amazon.co.jp
+MX|Mexico|webservices.amazon.com.mx
+ES|Spain|webservices.amazon.es
+UK|United Kingdom|webservices.amazon.co.uk
+US|United States|webservices.amazon.com
+
 ## Contributing
 
 Feel free to submit a pull request. If you'd like, you may discuss the change with me first by submitting an issue.
