@@ -37,8 +37,8 @@ opHelper.execute('ItemSearch', {
   'Keywords': 'harry potter',
   'ResponseGroup': 'ItemAttributes,Offers'
 }).then((response) => {
-	console.log("Results object: ", response.results);
-	console.log("Raw response body: ", response.responseBody);
+    console.log("Results object: ", response.result);
+    console.log("Raw response body: ", response.responseBody);
 }).catch((err) => {
     console.error("Something went wrong! ", err);
 });
