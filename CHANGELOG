@@ -1,7 +1,0 @@
-0.0.1 - Initial release
-
-0.0.2 - Added parsing of XML results using xml2js. Thanks pierrel.
-
-0.0.3 - 0.0.14 - Changes were not documented, refer to GitHub commits.
-
-1.0.0 - Errors are now returned as the first parameter of the callback function, instead of being processed by a seperate OnError function.
