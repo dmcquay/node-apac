@@ -1,3 +1,8 @@
+## 3.0.2
+
+- Mindor documentation updates
+- Update dependencies
+
 ## 3.0.0
 
 This is only a major version bump because we are not longer returning promises when using the
