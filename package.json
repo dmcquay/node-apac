@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "dotenv": "^2.0.0",
-    "mocha": "^3.2.0",
-    "proxyquire": "^1.7.10",
-    "sinon": "^1.17.6"
+    "dotenv": "4.0.0",
+    "mocha": "3.2.0",
+    "proxyquire": "1.7.10",
+    "sinon": "1.17.7"
   },
   "engines": {
     "node": ">=4.0.0"
