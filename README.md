@@ -126,9 +126,9 @@ var opHelper = new OperationHelper({
     awsSecret: '[YOUR AWS SECRET HERE]',
     assocId:   '[YOUR ASSOCIATE TAG HERE]',
     proxyHostname:    '[YOUR PROXY HOSTNAME HERE]',
-    proxyPort:    '[YOUR PROXY PORT NAME HERE]', # default 8080
-    proxyUsername: '[YOUR PROXY USERNAME NAME HERE]'
-    proxyPassword: '[YOUR PROXY PASSWORD NAME HERE]'
+    proxyPort:    '[YOUR PROXY PORT HERE]', # default 8080
+    proxyUsername: '[YOUR PROXY USERNAME HERE]'
+    proxyPassword: '[YOUR PROXY PASSWORD HERE]'
 });
 ```
 
