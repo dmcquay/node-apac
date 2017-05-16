@@ -118,7 +118,7 @@ US|United States|webservices.amazon.com
 
 ## Proxy
 
-To allow node-apac throw proxy, set the proxy configuration
+To allow node-apac through proxy, set the proxy configuration
 
 ```javascript
 var opHelper = new OperationHelper({
