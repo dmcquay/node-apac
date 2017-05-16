@@ -116,6 +116,22 @@ ES|Spain|webservices.amazon.es
 UK|United Kingdom|webservices.amazon.co.uk
 US|United States|webservices.amazon.com
 
+## Proxy
+
+To allow node-apac throw proxy, set the proxy configuration
+
+```javascript
+var opHelper = new OperationHelper({
+    awsId:     '[YOUR AWS ID HERE]',
+    awsSecret: '[YOUR AWS SECRET HERE]',
+    assocId:   '[YOUR ASSOCIATE TAG HERE]',
+    proxyHostname:    '[YOUR PROXY HOSTNAME HERE]',
+    proxyPort:    '[YOUR PROXY PORT NAME HERE]', # default 8080
+    proxyUsername: '[YOUR PROXY USERNAME NAME HERE]'
+    proxyPassword: '[YOUR PROXY PASSWORD NAME HERE]'
+});
+```
+
 ## Contributing
 
 Feel free to submit a pull request. If you'd like, you may discuss the change with me first by submitting an issue.
